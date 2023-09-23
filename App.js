@@ -1,11 +1,92 @@
 import React from "react";
 import ReactDOM  from "react-dom/client";
 
-const HeadingComponent=()=>
-(
-    <h1>Hello From Functional Components</h1>
-)
+
+/** Design of the Project [Planning]
+ * ***HEADER
+ * -> Logo
+ * -> Nav Items
+ * 
+ * 
+ * ***BODY
+ * -> Search Bar
+ * -> RestaurantContainer
+ *   -Restaurant Card
+ *      -->img
+ *      -->Name of Res, Start rating, Cuisines,Delievery Time Etc..    
+ *
+ * ***FOOTER
+ * -> CopyRight
+ * -> Links 
+ * -> Address
+ * -> Contact
+ */
+
+const Header = ()=>
+{
+    return(
+        <div className="header">
+            <div className="logo-container">
+                <img className="logo" src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=food&sf="
+                />
+            </div>
+
+            <div className="nav-items">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact Us</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
+        
+        </div>
+    );
+};
+
+
+
+const RestaurantCard =(props)=>
+{
+    return(
+        <div className="res-card" style={{backgroundColor:"#f0f0f0"}}>
+            <img
+                className="res-logo"
+                alt="res-logo"
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/e0vvulfbahjxjz6k4uwi"
+            />
+            <h3>{props.resName}</h3>
+            <h4>{props.Cuisines}</h4>
+            <h4>4.4 Stars</h4>
+            <h4>38 Minutes</h4>
+        </div>
+    );
+};
+
+const Body =()=>
+{
+    return(
+        <div className="body">
+            <div className="search">Search</div>
+            <div className="res-container">
+                <RestaurantCard resName="Meghna Foods" Cuisines="Biryani, North Indian, Asian"/>
+                <RestaurantCard resName="KFC" Cuisines="Burger, Fast Foods"/>
+            </div>
+        </div>
+    )
+};
+
+const AppLayout = ()=>
+{
+    return(
+        <div className="app">
+            <Header />
+            <Body />
+        </div>
+    );
+};
+
 
 const root=ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent/>);
+root.render(<AppLayout/>);
