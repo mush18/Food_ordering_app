@@ -12,9 +12,10 @@
     border: 1px solid black;
 }
 
+
 .logo
 {
-    width: 200px;
+    width: 100px;
 }
 
 
@@ -22,7 +23,7 @@
     display: flex;
     padding: 0px 20px;
     list-style: none;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .nav-items ul li{
