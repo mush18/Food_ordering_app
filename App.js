@@ -59,7 +59,6 @@ const RestaurantCard =({resName,Cuisines})=>
             <h4>{Cuisines}</h4>
             <h4>4.4 Stars</h4>
             <h4>38 Minutes</h4>
-            <h4>38 Minutes</h4>
         </div>
     );
 };
