@@ -1,27 +1,6 @@
 import React from "react";
 import ReactDOM  from "react-dom/client";
 
-
-/** Design of the Project [Planning]
- * ***HEADER
- * -> Logo
- * -> Nav Items
- * 
- * 
- * ***BODY
- * -> Search Bar
- * -> RestaurantContainer
- *   -Restaurant Card
- *      -->img
- *      -->Name of Res, Start rating, Cuisines,Delievery Time Etc..    
- *
- * ***FOOTER
- * -> CopyRight
- * -> Links 
- * -> Address
- * -> Contact
- */
-
 const Header = ()=>
 {
     return(
@@ -43,8 +22,6 @@ const Header = ()=>
         </div>
     );
 };
-
-
 
 const RestaurantCard =({resName,Cuisines})=>
 {
