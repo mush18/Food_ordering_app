@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
 *
 {
     margin: 0;
     padding: 0;
+}
+
+body
+{
+    font-family: 'Poppins', sans-serif;
 }
 
 .header
@@ -9,13 +16,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+
 }
 
 
 .logo
 {
     width: 100px;
+    margin-left: 1.2em;
+    
+}
+
+.Appname
+{
+    position: relative;
+    margin-left:2.3em;
+    bottom: 20px;
+    font-size: 1em;
+    font-weight: bold;
 }
 
 
@@ -34,7 +55,6 @@
 .res-card
 {
     width: 200px;
-    height: 300px;
     padding: 5px;
     margin: 19px;
 }

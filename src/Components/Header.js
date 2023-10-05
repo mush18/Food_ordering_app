@@ -7,13 +7,14 @@ const Header = ()=>
             <div className="logo-container">
                 <img className="logo" src={LOGO_URL}
                 />
+                <div className="Appname">Foodistic</div>
             </div>
 
             <div className="nav-items">
                 <ul>
                     <li>Home</li>
                     <li>About</li>
-                    <li>Contact Us</li>
+                    <li>Contact us</li>
                     <li>Cart</li>
                 </ul>
             </div>
