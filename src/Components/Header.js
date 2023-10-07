@@ -14,7 +14,7 @@ const Header = ()=>
                 <ul>
                     <li>Home</li>
                     <li>About</li>
-                    <li>Contact us</li>
+                    <li>Contact Us</li>
                     <li>Cart</li>
                 </ul>
             </div>
