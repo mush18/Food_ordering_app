@@ -8,6 +8,7 @@ const Body =()=>
   // const [listOfRestaurants,setListOfRestaurant]=useState(resList); --> After Using Live Api we dont need Mock Data
   const [listOfRestaurants,setListOfRestaurant]=useState([]);
 
+  const [filteredRestaurant,setFilteredRestaurant]=useState([]); // COpy of the RESTAURANT ARRAY....
 
   const [searchText,setSearhText]=useState("")
 
@@ -23,10 +24,12 @@ const Body =()=>
 
     const json=await data.json();
 
-    console.log(json);
+    // console.log(json);
 
     //Optional Chaining in JAVASCRIPT
     setListOfRestaurant(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants);
+
+    setFilteredRestaurant(json.data.cards[5].card.card.gridElements.infoWithStyle.restaurants)
   }
 
   if(listOfRestaurants.length===0)
@@ -49,7 +52,14 @@ const Body =()=>
                 {
                   //Filter the restaurant and update the UI.
                   //Search Text
-                  console.log(searchText)
+                  // console.log(searchText)
+
+                  const filteredRestaurant=listOfRestaurants.filter
+                  ((res,i)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()))
+
+                  console.log(filteredRestaurant);
+
+                  setFilteredRestaurant(filteredRestaurant);
                 }}
                 
                 
@@ -69,7 +79,7 @@ const Body =()=>
 
             <div className="res-container">
                 {
-                  listOfRestaurants.map((restaurant) =>(
+                    filteredRestaurant.map((restaurant) =>(
                   <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
                   ))
                 }
