@@ -113,3 +113,22 @@ body
     font-family: 'Poppins', sans-serif; 
     font-size:1em ;
 }
+
+.filter
+{
+    display: flex;
+}
+
+.search-box
+{   
+    margin: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-btn
+{
+    margin: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}

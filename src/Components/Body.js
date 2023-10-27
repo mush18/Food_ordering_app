@@ -8,6 +8,9 @@ const Body =()=>
   // const [listOfRestaurants,setListOfRestaurant]=useState(resList); --> After Using Live Api we dont need Mock Data
   const [listOfRestaurants,setListOfRestaurant]=useState([]);
 
+
+  const [searchText,setSearhText]=useState("")
+
   useEffect(()=>
   {
     fetchData()
@@ -34,7 +37,25 @@ const Body =()=>
     return(
         <div className="body">
             <div className="filter">
-                <button className="filter-btn" 
+              <div className="Search">
+                <input type="text" 
+                className="search-box" 
+                value={searchText}
+                onChange={(e)=>{
+                  setSearhText(e.target.value)
+                }}
+                />
+                <button onClick={()=>
+                {
+                  //Filter the restaurant and update the UI.
+                  //Search Text
+                  console.log(searchText)
+                }}
+                
+                
+                className="search-btn">Search</button>
+              </div>
+              <button className="filter-btn" 
                 onClick={()=>
                 {
                     const filterdList=listOfRestaurants.filter(
